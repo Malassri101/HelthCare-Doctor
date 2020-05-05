@@ -40,10 +40,10 @@ public class DoctorsAPI extends HttpServlet {
 	
 	{
 		
-		 String output = docObj.insertItem(request.getParameter("itemCode"),
-		 request.getParameter("itemName"),
-		 request.getParameter("itemPrice"),
-		 request.getParameter("itemDesc"));
+		 String output = docObj.insertDoctor(request.getParameter("docSpecialization"),
+		 request.getParameter("docName"),
+		 request.getParameter("docMobile"),
+		 request.getParameter("docEmail"));
 		 
 		 response.getWriter().write(output);
 		
@@ -56,10 +56,10 @@ public class DoctorsAPI extends HttpServlet {
 	{
 		 Map paras = getParasMap(request);
 		 String output = docObj.updateItem(paras.get("hidItemIDSave").toString(),
-		 paras.get("itemCode").toString(),
-		 paras.get("itemName").toString(),
-		 paras.get("itemPrice").toString(),
-		 paras.get("itemDesc").toString());
+		 paras.get("docSpecialization").toString(),
+		 paras.get("docName").toString(),
+		 paras.get("docMobile").toString(),
+		 paras.get("docEmail").toString());
 		 
 		response.getWriter().write(output);
 		} 
@@ -69,7 +69,7 @@ public class DoctorsAPI extends HttpServlet {
 	
 	{
 		 Map paras = getParasMap(request);
-		 String output = docObj.deleteItem(paras.get("itemID").toString());
+		 String output = docObj.deleteDoctor(paras.get("docID").toString());
 		 response.getWriter().write(output);
 		}
 	
