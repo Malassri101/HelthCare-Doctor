@@ -31,8 +31,8 @@ public class Doctor {
 
 			// Prepare the html table to be displayed
 
-			output = "<table border='1'><tr><th>Item Code</th>" + "<th>Item Name</th><th>Item Price</th>"
-					+ "<th>Item Description</th>" + "<th>Update</th><th>Remove</th></tr>";
+			output = "<table border='1'><tr><th>Specialization</th>" + "<th>Doctor Name</th><th>Mobile</th>"
+					+ "<th>Email</th>" + "<th>Update</th><th>Remove</th></tr>";
 
 			String query = "select * from doctor";
 			Statement stmt = con.createStatement();
@@ -42,7 +42,8 @@ public class Doctor {
 				String docID = Integer.toString(rs.getInt("docID"));
 				String docSpecialization = rs.getString("docSpecialization");
 				String docName = rs.getString("docName");
-				String docMobile = Double.toString(rs.getDouble("docMobile"));
+				//String docMobile = Double.toString(rs.getDouble("docMobile"));
+				String docMobile = rs.getString("docMobile");
 				String docEmail = rs.getString("docEmail");
 				
 				// Add into the html table
@@ -55,7 +56,7 @@ public class Doctor {
 				// buttons
 				output += "<td><input name='btnUpdate'" + "type='button' value='Update'"
 						+ "class='btnUpdate btn btn-secondary'></td>" + "<td><input name='btnRemove'"
-						+ "type='button' value='Remove'" + "class='btnRemove btn btn-danger'" + "data-itemid='" + docID
+						+ "type='button' value='Remove'" + "class='btnRemove btn btn-danger'" + "data-doctorid='" + docID
 						+ "'>" + "</td></tr>";
 			}
 			con.close();

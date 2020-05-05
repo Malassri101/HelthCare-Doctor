@@ -1,28 +1,28 @@
-<%@page import="com.HelthCare.Model.Item"%>
+<%@page import="com.HelthCare.Model.Doctor"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Items Management</title>
+<title>Doctors Management</title>
 <link rel="stylesheet" href="Views/bootstrap.min.css">
 <script src="Components/jquery-3.2.1.min.js"></script>
-<script src="Components/items.js"></script>
+<script src="Components/doctors.js"></script>
 </head>
 <body>
 	<div class="container">
 		<div class="row">
 			<div class="col-6">
-				<h1>Items Management V10.1</h1>
+				<h1>Doctors Management</h1>
 				<form id="formItem" name="formItem">
-					Item code: <input id="itemCode" name="itemCode" type="text"
-						class="form-control form-control-sm"> <br> Item name:
-					<input id="itemName" name="itemName" type="text"
-						class="form-control form-control-sm"> <br> Item
-					price: <input id="itemPrice" name="itemPrice" type="text"
-						class="form-control form-control-sm"> <br> Item
-					description: <input id="itemDesc" name="itemDesc" type="text"
+					    Doctor Specialization: <input id="docSpecialization" name="docSpecialization" type="text"
+						class="form-control form-control-sm"> <br> 
+						Doctor Name:<input id="docName" name="docName" type="text"
+						class="form-control form-control-sm"> <br> 
+						Doctor Mobile: <input id="docMobile" name="docMobile" type="text"
+						class="form-control form-control-sm"> <br> 
+						Doctor Email: <input id="docEmail" name="docEmail" type="text"
 						class="form-control form-control-sm"> <br> 
 						
 						<input id="btnSave" name="btnSave" type="button" value="Save"
@@ -35,8 +35,8 @@
 				<br>
 				<div id="divItemsGrid">
 					<%
-						Item itemObj = new Item();
-						out.print(itemObj.readItems());
+						Doctor doctorObj = new Doctor();
+						out.print(doctorObj.readDoctors());
 					%>
 				</div>
 				
