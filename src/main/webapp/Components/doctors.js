@@ -1,6 +1,6 @@
 $(document).ready(function() {
 	$("#alertSuccess").hide();
-	$("#alertSuccess").hide();
+	$("#alertError").hide();
 
 });
 
@@ -108,7 +108,7 @@ function onItemDeleteComplete(response, status) {
 
 // CLIENTMODEL=========================================================================
 function validateItemForm() {
-	// CODE
+	// Specialization
 	if ($("#docSpecialization").val().trim() == "") {
 		return "Insert Specialization.";
 	}
@@ -117,7 +117,7 @@ function validateItemForm() {
 		return "Insert Doctor Name.";
 	}
 
-	// PRICE-------------------------------
+	// Mobile-------------------------------
 	if ($("#docMobile").val().trim() == "") {
 		return "Insert Mobile.";
 	}
@@ -134,5 +134,3 @@ function validateItemForm() {
 	}
 	return true;
 }
-
-

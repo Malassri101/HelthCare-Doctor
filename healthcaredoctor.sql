@@ -33,7 +33,7 @@ CREATE TABLE `doctor` (
   `docSpecialization` varchar(20) NOT NULL,
   `docName` varchar(20) NOT NULL,
   `docMobile` varchar(20) NOT NULL,
-  `docEmail` varchar(20) NOT NULL
+  `docEmail` varchar(30) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -41,9 +41,9 @@ CREATE TABLE `doctor` (
 --
 
 INSERT INTO `doctor` (`docID`, `docSpecialization`, `docName`, `docMobile`, `docEmail`) VALUES
-(9, 'Psychiatrist', 'Jayantha Perera', '712283234', 'sassanath@gmail.com'),
-(10, 'Psychiatrist', 'Nirmali Alwis', '779212392', 'nirmali912@gmail.com'),
-(11, 'Surgeon', 'Saman Rathnayake', '7712121242', 'samanewq@gmail.com');
+(9, 'Psychiatrist', 'Jayantha Perera', '712283234', 'sanath@gmail.com'),
+(10, 'Psychiatrist', 'Nirmali Alwis', '779212392', 'nirmali@gmail.com'),
+(11, 'Surgeon', 'Saman Rathnayake', '7712121242', 'samane@gmail.com');
 
 --
 -- Indexes for dumped tables
