@@ -110,27 +110,27 @@ function onItemDeleteComplete(response, status) {
 function validateItemForm() {
 	// CODE
 	if ($("#docSpecialization").val().trim() == "") {
-		return "Insert Item Code.";
+		return "Insert Specialization.";
 	}
 	// NAME
 	if ($("#docName").val().trim() == "") {
-		return "Insert Item Name.";
+		return "Insert Doctor Name.";
 	}
 
 	// PRICE-------------------------------
 	if ($("#docMobile").val().trim() == "") {
-		return "Insert Item Price.";
+		return "Insert Mobile.";
 	}
 	// is numerical value
 	var tmpPrice = $("#docMobile").val().trim();
 	if (!$.isNumeric(tmpPrice)) {
-		return "Insert a numerical value for Item Price.";
+		return "Insert a numerical value for Mobile.";
 	}
 	// convert to decimal price
-	$("#docMobile").val(parseFloat(tmpPrice).toFixed(2));
+	//$("#docMobile").val(parseFloat(tmpPrice).toFixed(2));
 	// DESCRIPTION------------------------
 	if ($("#docEmail").val().trim() == "") {
-		return "Insert Item Description.";
+		return "Insert Email.";
 	}
 	return true;
 }
