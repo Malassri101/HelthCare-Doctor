@@ -22,7 +22,7 @@
 						class="form-control form-control-sm"> <br> 
 						Doctor Mobile: <input id="docMobile" name="docMobile" type="text"
 						class="form-control form-control-sm"> <br> 
-						Doctor Email: <input id="docEmail" name="docEmail" type="text"
+						Doctor Email: <input id="docEmail" name="docEmail" type="email"
 						class="form-control form-control-sm"> <br> 
 						
 						<input id="btnSave" name="btnSave" type="button" value="Save"
